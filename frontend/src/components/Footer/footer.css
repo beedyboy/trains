@@ -1,0 +1,40 @@
+footer {
+  color: var(--light-color);
+}
+.foot_social a {
+    padding: 5px;   
+  color: var(--light-color);
+}
+.foot-menu {
+  padding: 1.2rem;  
+  margin: 0 10px;
+}
+.foot-menu >* a{
+    padding: 1.2rem; 
+    font-size: 14px;
+    line-height: 38px; 
+    color: var(--light-color);
+}
+.dull {
+
+    opacity: 0.8;
+}
+
+@media (max-width: 650px) {
+footer .grid >* {
+    justify-self: center;
+    align-items: center;
+    /* display: none; */
+}
+.foot_social a {
+    padding: 0;    
+}
+.foot-menu {
+  padding: 0;  
+  margin: 0;
+}
+.foot-menu >* a{
+    padding: 0; 
+    font-size: 16px; 
+}
+}

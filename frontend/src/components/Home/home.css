@@ -1,0 +1,89 @@
+/* Banner Image */
+.illustrator {
+  height: 400px;
+  background-image: url("../../assets/images/bg/home_books.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+.illustrator h1 {
+  font-size: 40px;
+}
+.illustrator p {
+  margin: 20px 0;
+}
+.illustrator .grid {
+  overflow: visible;
+  grid-template-columns: 55% 45%;
+  grid-gap: 30px;
+}
+
+.illustrator::before,
+.illustrator::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+
+/* welcome */
+.welcome {
+  padding-top: 80px;
+}
+.welcome-heading {
+  max-width: 500px;
+  color: #333;
+  margin: auto;
+}
+.welcome .grid h3 {
+  font-size: 35px;
+}
+.welcome .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.welcome-container > div {
+  /* display: none; */
+  height: 150px;
+}
+.welcome-container > div:hover {
+  transform: skewY(3deg);
+}
+.welcome #train {
+  background-image: url("../../assets/images/abc.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.welcome #lead {
+  background-image: url("../../assets/images/lead.png");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.welcome #consult {
+  background-image: url("../../assets/images/question_answer.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.cli .grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}

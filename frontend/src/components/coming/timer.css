@@ -1,0 +1,22 @@
+.timer-container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  background-color: rgba(255, 255, 255, 0.1);
+  
+  text-align: center;
+  margin: auto;
+}
+
+  .timer-item {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  border-right: solid 1px rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+.timer-item:last-child {
+  border-right-color: transparent;
+}
+/*# sourceMappingURL=timer.css.map */
+ 
