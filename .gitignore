@@ -1,5 +1,4 @@
 /client/ 
 /node_modules/
-/public/build/
-/sequelize/
+/public/build/ 
 .DS_Store
