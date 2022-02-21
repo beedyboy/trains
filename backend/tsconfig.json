@@ -1,10 +1,5 @@
 {
   "compilerOptions": {
-    // "sourceMap": true,
-    // "outDir": "dist", 
-    // "lib": [
-    //   "esnext"
-    // ],
     "allowJs": true,
     "baseUrl": ".",
     "esModuleInterop": true,

@@ -6,7 +6,7 @@ dotenv.config({ path: path.resolve(__dirname, "../.env") });
 module.exports.development = { 
   dialect: "mysql",
   seederStorage: "sequelize",
-  url: process.env.DB_URL
+  url: process.env.DB_URL_TEST
 };
 
 module.exports.production = {

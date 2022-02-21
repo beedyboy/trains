@@ -2,6 +2,8 @@ import { ApolloServer } from "apollo-server-express";
 import cors from "cors";
 import express from "express";
 import accessEnv from "#root/helpers/accessEnv";
+import * as path from "path"; 
+import { graphqlUploadExpress } from "graphql-upload";
 import  resolvers from "#root/graphql/resolvers";
 import { typeDefs } from "#root/graphql/schema";
 const PORT = accessEnv("PORT", 7000);
@@ -23,9 +25,13 @@ app.use(
     optionsSuccessStatus: 200,
   })
 );
+
+app.use(graphqlUploadExpress()); 
+app.use(express.static(path.join(__dirname, "./upload")));
 apolloServer.start().then((res) => {
   apolloServer.applyMiddleware({ app, path: "/graphql" });
 });
+ 
 // apolloServer.applyMiddleware({app, path: "/graphql"});
 app.listen(PORT, "0.0.0.0", () => {
   console.info(`Server running on ${PORT}`);

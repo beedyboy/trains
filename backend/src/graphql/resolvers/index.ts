@@ -1,6 +1,8 @@
  import * as Query from "./Query"
  import  * as Mutation from './Mutation'; 
+ import { GraphQLUpload } from "graphql-upload";
 const resolvers = {
+    Upload:GraphQLUpload,
     Query,
     Mutation
 };
