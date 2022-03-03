@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize-typescript";
 
-import accessEnv from "#root/helpers/accessEnv";
+import accessEnv from "../helpers/accessEnv";
 
 import { Subscriber, Blog } from './models';
 

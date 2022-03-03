@@ -1,32 +1,100 @@
-.blog-section{
-    display:grid;
-    padding-top: 50px;
+.blog-section {
+  display: grid;
+  padding-top: 50px;
 }
-.blog-card{
-    display: flex;
+.blog-view-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.blog-view-section img {
+  height: 250px;
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  /* border: 3px solid red; */
+  height: 400px;
+  padding: 10px;
+}
+.blog-card-img {
+  height: 250px;
+}
+.blog-card-img img {
+  object-fit: fill;
+  height: 250px;
+  width: 100%;
+}
+.blog-title {
+  font-size: 16px;
+  font-weight: bolder;
+}
+.blog-content {
+  font-size: 14px;
+}
+.blog-content-area {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+}
+.blog-cover {
+  padding: 1rem;
+  width: 100%;
+  height: 500px;
+  /* overflow: hidden; */
+}
+.blog-cover img {
+  max-width: 100%;
+  height: 470px;
+  max-height: 100%;
+  display: block;
+}
+/* img{
+   height: 99999px;
+   max-height: 100%;
+   max-width: 100%;    
+   display: block;
+   margin: auto auto;
+} */
+.blog-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.blog-stat {
+  left: auto;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-section {
+    display: grid;
+    padding-top: 25px;
+  }
+  .blog-section .grid {
+    gap: 5px;
+  }
+  .blog-view-section {
     flex-direction: column;
-    /* border: 3px solid red; */
-    height: 400px;
-    padding: 10px;
-}
-.blog-card-img{
-    height: 250px;
-}
-.blog-card-img img{ 
-    object-fit: fill;
-    height: 250px;
+  }
+  .blog-content-area {
     width: 100%;
-}
-.blog-title{
-    font-size: 16px;
-    font-weight: bolder;
-}
-.blog-content{ 
-    font-size: 14px;
-}
-@media (max-width: 650px) {
-    .blog-card{ 
-        height: 400px;
-        padding: 1px;
-    }
+  }
+  .blog-stat,
+  .blog-title {
+    padding-left: 1rem;
+  }
+
+  .blog-view-content {
+    padding: 1rem;
+  }
+  .blog-cover img {
+    width: 100%;
+  }
+  .blog-card { 
+    height: 400px;
+    padding: 1px;
+  }
+  .blog-content {
+    font-size: 12px; 
+  }
 }

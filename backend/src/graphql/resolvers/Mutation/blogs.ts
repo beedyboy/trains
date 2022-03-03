@@ -1,7 +1,7 @@
-import * as db from "#root/db/models";
+import * as db from "../../../db/models";
 import * as path from "path";
 import * as fs from "fs";
-import word from "#root/helpers/word";
+import word from "../../../helpers/word";
 
 interface IFile {
   filename: string;
@@ -39,7 +39,7 @@ const blog = {
       return assetUniqName;
     });
   }, 
-  singleUpload: async (parent: any, { file }: { file: File }): Promise<any> => {
+  singleUpload: async (parent: any, { file }: { file: IFile }): Promise<any> => {
     const pathName = await blog.storeFS(file);
     return {
       url: `http://localhost:8080/${pathName}`,

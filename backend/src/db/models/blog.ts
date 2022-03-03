@@ -47,8 +47,8 @@ interface BlogModel extends Optional<BlogAttributes, 'id'> {};
     content!: string;
     @Column({
       allowNull: false,
-      type: DataType.STRING,
-      unique: true
+      type: DataType.STRING 
     })
     images!: string;
+    
   }

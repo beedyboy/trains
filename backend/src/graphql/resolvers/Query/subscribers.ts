@@ -1,4 +1,4 @@
-import * as db from "#root/db/models";
+import * as db from "../../../db/models";
 import { Identifier } from "sequelize/dist";
 
 const subscriberResolver = {

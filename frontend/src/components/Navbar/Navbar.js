@@ -28,7 +28,7 @@ const Navbar = () => {
   };
   return (
     <div className="navbar">
-      <div className="container flex ai-center jc-between">
+      <div className="fluid-container flex ai-center jc-between">
         <h1 className="brand">Train Lead Consult</h1>
         <nav className="nav">
           <ul className="main_menu">{renderMenu()}</ul>

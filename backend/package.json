@@ -1,16 +1,20 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/app.js",
   "license": "MIT",
   "scripts": {
     "db:migrate": "sequelize db:migrate",
     "db:migrate:undo": "sequelize db:migrate:undo",
-    "watch": "ts-node-dev --respawn index.dev.ts",
-    "start": "nodemon index.dev.ts"
+    "watch": "ts-node-dev --respawn app.ts",
+    "dev": "nodemon app.ts",
+    "start": "npm run build dist/app.js",
+    "start:bd": " npm run dist/app.js",
+    "build": "NODE_ENV=production npm run build-ts",
+    "build-ts": "tsc -p ."
   },
   "devDependencies": {
-    "module-alias": "^2.2.2",
+    "@types/validator": "^13.7.1",
     "nodemon": "^2.0.15",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.5"
@@ -32,8 +36,5 @@
     "sequelize-cli": "^6.4.1",
     "sequelize-typescript": "^2.1.2",
     "slugify": "^1.6.5"
-  },
-  "_moduleAliases": {
-    "#root": "./src"
   }
 }

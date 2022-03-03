@@ -43,10 +43,10 @@ export const typeDefs = gql`
 
   type Query {
     subscribers: [Subscriber]!
-    getSubscriber(id: String): Subscriber
+    getSubscriber(id: String): Subscriber!
     users: [User!]!
     blogs: [Blog]!
-    getBlogBySlug(slug: String): Blog
+    getBlogBySlug(slug: String!): Blog!
   }
 
   type Mutation {

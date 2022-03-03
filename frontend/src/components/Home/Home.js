@@ -42,7 +42,9 @@ const Home = () => {
       <section className="about">
         <div className="container grid  my-4">
           <div>
-            <h3 data-cy="data-1" className="text-center lead">About Us</h3>
+            <h3 data-cy="data-1" className="text-center lead">
+              About Us
+            </h3>
             <p>
               At trainlead consult we believe every individual possesses the
               dream of living a more comfortable and fulfilling life. And we
@@ -56,7 +58,7 @@ const Home = () => {
               can achieve
             </p>
             <Link to="/about" className="btn btn-dark">
-              About Us
+              Explore More ...
             </Link>
           </div>
           <img src={aboutImg} alt="About Us" />

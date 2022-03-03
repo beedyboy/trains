@@ -5,8 +5,8 @@ const Contact = () => {
     <React.Fragment>
       <section>
         <div className="container">
-          <div className="flex jc-center">
-            <h2 className="  head-title lead bold text-center ">ABOUT</h2>
+          <div className="flex jc-center py-1 ">
+            <h2 className="  head-title lead bold text-center">ABOUT</h2>
           </div>
           <p className="heading-text text-center my-1">
             At trainlead consult we believe every individual possesses the dream
@@ -76,7 +76,7 @@ const Contact = () => {
                 programmes it is aimed that the participants would have acquired
                 a designated skill, develop the interest to pursue in the line
                 of the skill through our mentorship plan and as well gained
-                knowledge on business startup and management. reality.
+                knowledge on business startup and management.
               </p>
             </div>
             <div>

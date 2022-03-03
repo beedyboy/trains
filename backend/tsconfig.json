@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "module": "commonjs", 
+    "sourceMap": true,
+    "outDir": "dist",  
+    "lib": [
+      "esnext"
+    ],
     "allowJs": true,
     "baseUrl": ".",
     "esModuleInterop": true,
@@ -8,11 +14,11 @@
     "target": "es6",
     "strict": true,
     "moduleResolution": "Node",
-    "paths": {
-      "#root/*": [
-        "./src/*"
-      ]
-    },
+    // "paths": {
+    //   "#root/*": [
+    //     "./src/*"
+    //   ]
+    // },
     "types": [
       "node"
     ]

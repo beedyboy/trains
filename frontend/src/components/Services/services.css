@@ -1,68 +1,100 @@
-
 /* service_page */
-.service_page{
-    height: 400px;
-    background-color: var(--primary-color);
-    background-image: url("../../assets/images/bg/contact-us.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: multiply;
-    color: #fff;
-    position: relative;
+.service_page {
+  height: 400px;
+  background-color: var(--primary-color);
+  background-image: url("../../assets/images/bg/contact-us.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  color: #fff;
+  position: relative;
+}
+.service_page-text {
+  padding: 15px;
+}
+.service_page h1 {
+  font-size: 40px;
+}
+.service_page p {
+  margin: 20px 0;
+}
+.service_page .grid {
+  overflow: visible;
+  grid-template-columns: 55% 45%;
+  grid-gap: 30px;
+}
+.service_page-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+}
+.service_page-form .form-control {
+  margin: 30px 0;
+}
+
+.service_page-form input[type="text"],
+.service_page-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+.service_page-form input:focus {
+  outline: none;
+}
+
+.service_page::before,
+.service_page::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+
+@media screen and (max-width: 768px) {
+  .service_page .grid {
+    grid-template-columns: 1fr;
   }
-  .service_page-text{
-      padding: 15px;
+  .service_page-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
   }
   .service_page h1 {
-    font-size: 40px;
+    font-size: 25px;
+    font-weight: 700;
   }
   .service_page p {
-    margin: 20px 0;
-  }
-  .service_page .grid {
-      overflow: visible;
-      grid-template-columns: 55% 45%;
-      grid-gap: 30px;
+    margin: 18px 0;
   }
   .service_page-form {
-      position: relative;
-      top: 60px;
-      height: 350px;
-      width: 400px;
-      padding: 40px;
-      z-index: 100;
-      justify-self: flex-end;
+    top: -40px;
+    /* display: none; */
+    display: relative;
+    height: 300px;
+    width: 400px;
+    padding: 30px;
   }
   .service_page-form .form-control {
-      margin: 30px 0;
+    margin: 30px 0;
   }
-
   .service_page-form input[type="text"],
   .service_page-form input[type="email"] {
-      border: 0;
-      border-bottom: 1px solid #b4becb;
-      width: 100%;
-      padding: 3px;
-      font-size: 16px;
+    padding: 1px;
+    font-size: 13px;
   }
-  .service_page-form input:focus{
-      outline: none;
-  }
-
-  .service_page::before,
-  .service_page::after {
-      content: "";
-      position: absolute;
-      height: 100px;
-      bottom: -70px;
-      right: 0;
-      left: 0;
-      background: #fff;
-      transform: skewY(-3deg);
-      -webkit-transform: skewY(-3deg);
-      -moz-transform: skewY(-3deg);
-      -ms-transform: skewY(-3deg);
-  }
-  
-
+}
