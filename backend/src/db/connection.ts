@@ -3,8 +3,8 @@ import { Sequelize } from "sequelize-typescript";
 import accessEnv from "../helpers/accessEnv";
 
 import { Subscriber, Blog } from './models';
-
 const dbURL = accessEnv("DB_URL_TEST");
+
 
 // const sequelize = new Sequelize(dbURL, {
 const sequelize = new Sequelize(dbURL, {

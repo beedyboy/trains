@@ -40,11 +40,27 @@ const subscribeMe = gql`
     }
   }
 `;
+const CONTACT_US = gql`
+   mutation contactUs($values: ContactInput!) {
+    contactUs(data: $values) {
+     message
+    }
+  }
+`;
+const REQUEST_QUOTE = gql`
+   mutation serviceQuote($values: QuoteInput!) {
+    serviceQuote(data: $values) {
+     message
+    }
+  }
+`;
 const apis = {
   getSubscribers,
   subscribeMe,
   allBlogs,
   GET_BLOG_SLUG,
+  CONTACT_US,
+  REQUEST_QUOTE
 };
 export default apis;
  

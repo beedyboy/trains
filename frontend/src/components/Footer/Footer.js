@@ -9,7 +9,8 @@ import {
   AlertDescription,
   CloseButton,
   useToast,
-  Input,Button
+  Input,
+  Button,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import Brand from "../../assets/images/brand.jpg";
@@ -17,12 +18,12 @@ import apis from "../../apollo/api";
 import "./footer.css";
 const Footer = () => {
   const toast = useToast();
-  const [submit, { loading, error,reset }] = useMutation(apis.subscribeMe, {
+  const [submit, { loading, error, reset }] = useMutation(apis.subscribeMe, {
     onCompleted: (data) => {
       reset();
-      console.log("Data from mutation", data);
+      // console.log("Data from mutation", data);
       toast({
-        position: 'top-right',
+        position: "top-right",
         title: "Email Subscription.",
         description: "Email subscription successful.",
         status: "success",
@@ -37,7 +38,7 @@ const Footer = () => {
   const renderError = () => {
     if (error)
       return (
-        <Alert status="error" variant='solid'>
+        <Alert status="error" variant="solid">
           <AlertIcon />
           <AlertTitle mr={1}>Submission error!</AlertTitle>
           <AlertDescription> ${error.message}</AlertDescription>
@@ -126,17 +127,23 @@ const Footer = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <Button type="submit" disabled={loading}  colorScheme='blue' variant='outline'>
+                <Button
+                  type="submit"
+                  disabled={loading}
+                  colorScheme="blue"
+                  variant="outline"
+                >
                   {loading ? "Sending" : "Subscribe Now"}
                 </Button>
               </form>
               {renderError()}
             </div>
           </div>
-         <div className="content-up-border">
-         <p className="text-center dull"> 
-            &copy;   {new Date().getFullYear()}. All rights reserved.
-          </p></div>
+          <div className="content-up-border">
+            <p className="text-center dull">
+              &copy; {new Date().getFullYear()}. All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </>

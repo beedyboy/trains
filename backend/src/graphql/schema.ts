@@ -23,6 +23,9 @@ export const typeDefs = gql`
     createdAt: String!
     updatedAt: String!
   }
+  type Contact { 
+    message: String! 
+  }
   type User {
     id: ID!
     name: String
@@ -40,6 +43,18 @@ export const typeDefs = gql`
     content: String!
     file: Upload!
   }
+  input ContactInput {
+    name: String!
+    email: String! 
+    subject: String! 
+    message: String! 
+  }
+  input QuoteInput {
+    company: String!
+    email: String! 
+    subject: String! 
+    message: String! 
+  }
 
   type Query {
     subscribers: [Subscriber]!
@@ -56,6 +71,8 @@ export const typeDefs = gql`
     singleUpload(file: Upload!): File!
     fileUpload(file: [Upload]!): [File]!
     multipleUploadFile(files: [Upload]!): [File]!
+    contactUs(data: ContactInput!): Contact!
+    serviceQuote(data: QuoteInput!): Contact!
   }
 `;
 

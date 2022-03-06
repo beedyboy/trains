@@ -1,8 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import "./contact.css";
 import contactImg from "../../assets/images/cc.jpg";
-const Services = () => {
+import { useMutation } from "@apollo/client";
+import { useToast } from "@chakra-ui/react";
+import "./contact.css";
+import apis from "../../apollo/api";
+const Contact = () => {
+  const toast = useToast();
+  const [submitForm, { loading, error, reset }] = useMutation(apis.CONTACT_US, {
+    onCompleted: (data) => {
+      reset();
+      console.log("Data from mutation", data);
+      toast({
+        position: "top-right",
+        title: "Contact Us.",
+        description: data,
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
+    },
+
+    onError: (error) => console.error("Error creating a post", error),
+  });
+  const [formData, setFormData] = useState({
+    values: {
+      email: "",
+      name: "",
+      subject: "",
+      message: "",
+    },
+  });
+  const { values } = formData;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((state) => ({
+      ...state,
+      values: {
+        ...state.values,
+        [name]: value,
+      },
+    }));
+  };
   return (
     <>
       <section className="showcase">
@@ -10,13 +49,12 @@ const Services = () => {
           <div className="showcase-text">
             <h1>Get in touch!</h1>
             <p>Contact us for quotes, enquiries and consultation</p>
-            
           </div>
         </div>
       </section>
       <section className="contact">
         <div className="container">
-          <h3>Contact  Us</h3>
+          <h3>Contact Us</h3>
           <div className="grid grid-3  text-center">
             <div className="card h-px-1">
               <h3 className="primary-color">Our Location</h3>
@@ -42,12 +80,19 @@ const Services = () => {
           <div className="grid">
             <img src={contactImg} alt="customer service" />
             <div className="contact-form">
-              <form>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  submitForm({ variables: { values } });
+                }}
+              >
                 <div className="form-control">
                   <input
                     type="email"
-                    name="name"
+                    name="email"
                     placeholder="Email"
+                    onChange={handleChange}
+                    value={values.email}
                     required
                   />
                 </div>
@@ -56,6 +101,8 @@ const Services = () => {
                     type="text"
                     name="name"
                     placeholder="fullname"
+                    onChange={handleChange}
+                    value={values.name}
                     required
                   />
                 </div>
@@ -64,6 +111,8 @@ const Services = () => {
                     type="text"
                     name="subject"
                     placeholder="Subject"
+                    onChange={handleChange}
+                    value={values.subject}
                     required
                   />
                 </div>
@@ -74,14 +123,18 @@ const Services = () => {
                     name="message"
                     placeholder="Message"
                     className="body-text"
+                    onChange={handleChange}
+                    value={values.message}
                     required
                   ></textarea>
-                  {/* <input
-                    type="text"
-                  /> */}
                 </div>
 
-                <input type="submit" value="Send" className="btn btn-primary" />
+                <input
+                  type="submit"
+                  disabled={loading}
+                  value={loading ? "processing your request..." : "Send"}
+                  className="btn btn-primary"
+                />
               </form>
             </div>
           </div>
@@ -156,4 +209,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Contact;

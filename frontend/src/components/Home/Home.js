@@ -28,10 +28,10 @@ const Home = () => {
           </h3>
           <div className="grid grid-3 my-3 welcome-container">
             <div id="train" className="card">
-              <p className="text-secondary text-center">We Train</p>
+              <p className="text-secondary text-center">Accessible Services</p>
             </div>
             <div id="lead" className="card">
-              <p className="text-secondary text-center">We tech by leading</p>
+              <p className="text-secondary text-center">Reliable Team</p>
             </div>
             <div id="consult" className="card">
               <p className="text-secondary text-center">Easy Consultation</p>
@@ -64,38 +64,7 @@ const Home = () => {
           <img src={aboutImg} alt="About Us" />
         </div>
       </section>
-      {/* <section className="stats">
-        <div className="container">
-          <h3 className="stats-heading tex-center my-1">
-            Welcome to the best platform for building application of all types
-            with moderm architecture and scaling
-          </h3>
-          <div className="grid grid-3 text-center my-4">
-            <div>
-              <i className="fas fa-server fa-3x"></i>
-              <h3>10,349,405</h3>
-              <p className="text-secondary">Deployments</p>
-            </div>
-
-            <div>
-              <i className="fas fa-upload fa-3x"></i>
-              <h3>987 TB</h3>
-              <p className="text-secondary">Published</p>
-            </div>
-
-            <div>
-              <i className="fas fa-project-diagram fa-3x"></i>
-              <h3>2,343, 265 </h3>
-              <p className="text-secondary">Project</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="cli">
-        <div className="container grid">
-          <img src="../../assets/images/trainslead_handshake.png" alt="cli" />
-        </div> 
-      </section> */}
+      
     </>
   );
 };
