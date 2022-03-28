@@ -1,5 +1,6 @@
 /* service_page */
 .service_page {
+  padding-top: 40px;
   height: 400px;
   background-color: var(--primary-color);
   background-image: url("../../assets/images/bg/contact-us.jpg");
@@ -26,19 +27,27 @@
 }
 .service_page-form {
   position: relative;
-  top: 60px;
-  height: 350px;
+  top: 40px;
+  height: 380px;
   width: 400px;
-  padding: 40px;
+  padding: 30px;
   z-index: 100;
   justify-self: flex-end;
 }
 .service_page-form .form-control {
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 .service_page-form input[type="text"],
 .service_page-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+}
+
+.service_page-form textarea {
   border: 0;
   border-bottom: 1px solid #b4becb;
   width: 100%;
@@ -68,6 +77,9 @@
   .service_page .grid {
     grid-template-columns: 1fr;
   }
+  .service_page_into.stats { 
+  padding-top: 200px;
+  }
   .service_page-text {
     display: flex;
     flex-direction: column;
@@ -85,12 +97,12 @@
     top: -40px;
     /* display: none; */
     display: relative;
-    height: 300px;
+    /* height: 300px; */
     width: 400px;
     padding: 30px;
   }
   .service_page-form .form-control {
-    margin: 30px 0;
+    margin: 12px 0;
   }
   .service_page-form input[type="text"],
   .service_page-form input[type="email"] {

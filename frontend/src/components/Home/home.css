@@ -1,5 +1,6 @@
 /* Banner Image */
 .illustrator {
+  padding-top: 50px;
   height: 400px;
   background-image: url("../../assets/images/bg/home_books.jpg");
   background-size: cover;
@@ -66,8 +67,8 @@
   color: #fff;
 }
 .welcome #lead {
-  background-image: url("../../assets/images/lead.png");
-  background-size: cover;
+  background-image: url("../../assets/images/bg/lead.jpg");
+  background-size: contain;
   background-blend-mode: multiply;
   background-color: var(--secondary-color);
   color: #fff;

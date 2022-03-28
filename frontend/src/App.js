@@ -1,24 +1,20 @@
-import React, { useState } from "react";
+import React  from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Template/Layout";
 import {
   About,
   Blog,
   BlogView,
-  Contact,
-  Coming,
+  Contact, 
   Home,
   Services,
   NotFound,
 } from "./components";
 
-const App = () => {
-  const [busy] = useState(false);
+const App = () => { 
   return (
     <>
-      {busy ? (
-        <Coming />
-      ) : (
+     
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
@@ -31,8 +27,7 @@ const App = () => {
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
-        </BrowserRouter>
-      )}
+        </BrowserRouter> 
     </>
   );
 };

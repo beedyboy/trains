@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="fluid-container flex ai-center jc-between">
-        <h1 className="brand">Train Lead Consult</h1>
+        <h1 className="brand"><Link to="/"className="decor-off">Train Lead Consult </Link></h1>
         <nav className="nav">
           <ul className="main_menu">{renderMenu()}</ul>
           <div className="menu_smallScreen">
@@ -49,16 +49,7 @@ const Navbar = () => {
                 </ul>
               </div>
             )}
-          </div>
-          {/* <div className="nav_smallscreen">
-            <GiHamburgerMenu color="fff" fontSize={27} onClick={() => setToggleMenu(true)} />
-           {toggleMenu && (
-            <div className="nav_smallscreen_overlay  ai-center">
-              <IoCloseSharp className="overlay_close"  onClick={() => setToggleMenu(false)} />
-               
-            </div>
-            )}
-          </div> */}
+          </div> 
         </nav>
       </div>
     </div>

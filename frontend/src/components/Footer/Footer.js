@@ -13,7 +13,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import Brand from "../../assets/images/brand.jpg";
+import Brand from "../../assets/images/brand.png";
 import apis from "../../apollo/api";
 import "./footer.css";
 const Footer = () => {

@@ -12,16 +12,21 @@ const apolloServer = new ApolloServer({ typeDefs, resolvers });
 
 const app = express();
 
+const origin = "*";
 app.use(
   cors({
-    origin: (origin, cb) => cb(null, true),
-    credentials: true,
-    preflightContinue: true,
-    exposedHeaders: [
-      "Access-Control-Allow-Headers",
-      "Access-Control-Allow-Origin, Origin, X-Requested-With, Content-Type, Accept",
-      "X-Password-Expired",
+    allowedHeaders: [
+      "Origin",
+      " X-Requested-With",
+      "Content-Type",
+      "Accept",
+      "Authorization",
+      "X-Access-Token",
     ],
+    exposedHeaders: ["sessionId"],
+    origin: origin,
+    methods: "OPTIONS,GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
     optionsSuccessStatus: 200,
   })
 );

@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
 import aboutImg from "../../assets/images/about-us.jpg";
+// import travelImg from "../../assets/images/travels/18.jpg";
 const Home = () => {
   return (
     <>
