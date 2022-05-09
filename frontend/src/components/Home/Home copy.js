@@ -2,38 +2,13 @@ import React from "react";
 import "./home.css";
 import { Link } from "react-router-dom";
 import aboutImg from "../../assets/images/about-us.jpg";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
-
-// import travelImg from "../../assets/images/travels/18.jpg"; 
+// import travelImg from "../../assets/images/travels/18.jpg";
 const Home = () => {
-
-const getConfigurableProps = () => ({
-  showArrows: true,
-  showStatus:  true,
-  showIndicators: true,
-  infiniteLoop: true,
-  showThumbs: false,
-  useKeyboardArrows:true,
-  autoPlay: true,
-  stopOnHover:true,
-  swipeable: true,
-  dynamicHeight: true,
-  emulateTouch: true, 
-  autoFocus:  false, 
-  thumbWidth:  100, 
-  selectedItem:   0, 
-  interval:  5000, 
-  transitionTime: 500, 
-  swipeScrollTolerance: 5,
-  // ariaLabel: text('ariaLabel', undefined),
-});
   return (
     <>
-      <Carousel {...getConfigurableProps()}>
-      <section className="consultation">
+      <section className="illustrator">
         <div className="container grid">
-          <div className="consultation-text">
+          <div className="illustrator-text">
             <h1>We train by leading through consultation</h1>
             <p>We rise by lifting others</p>
             <Link to="/about" className="btn btn-outline">
@@ -44,22 +19,7 @@ const getConfigurableProps = () => ({
             <img src={illustrator} alt="we train" />
           </div> */}
         </div>
- 
       </section>
-
-      <section className="real_estate"> 
-        <div className="container grid">
-        <div className="real_estate-text">
-            <h1>Get best services on lands and housing</h1>
-            <p>We have an affordable properties with flexible payment structure</p>
-            <Link to="/about" className="btn btn-outline">
-              Ask How?
-            </Link>
-          </div>
-        </div>
-        
-      </section>
-        </Carousel>
       <section className="welcome">
         <div className="container">
           <h3 className="welcome-heading text-center my-1">
@@ -80,13 +40,13 @@ const getConfigurableProps = () => ({
           </div>
         </div>
       </section>
-      <section className="about my-4 bg-red">
-        <div className="fluid-container grid  my-4">
-          <div className="flex flex-column">
+      <section className="about">
+        <div className="container grid  my-4">
+          <div>
             <h3 data-cy="data-1" className="text-center lead">
               About Us
             </h3>
-            <p className="p-3">
+            <p>
               At trainlead consult we believe every individual possesses the
               dream of living a more comfortable and fulfilling life. And we
               recognize the fact that those dreams are valid and achievable. We
@@ -98,7 +58,7 @@ const getConfigurableProps = () => ({
               estate investment. We believe together we can lead and together we
               can achieve
             </p>
-            <Link to="/about" className="btn btn-dark ml-3 mt-2 w-20">
+            <Link to="/about" className="btn btn-dark">
               Explore More ...
             </Link>
           </div>

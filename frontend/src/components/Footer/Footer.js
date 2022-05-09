@@ -41,7 +41,7 @@ const Footer = () => {
         <Alert status="error" variant="solid">
           <AlertIcon />
           <AlertTitle mr={1}>Submission error!</AlertTitle>
-          <AlertDescription> ${error.message}</AlertDescription>
+          <AlertDescription> {error.message}</AlertDescription>
           <CloseButton position="absolute" right="8px" top="8px" />
         </Alert>
       );

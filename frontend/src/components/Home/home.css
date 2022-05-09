@@ -1,28 +1,41 @@
 /* Banner Image */
-.illustrator {
+.real_estate, .consultation {
   padding-top: 50px;
   height: 400px;
-  background-image: url("../../assets/images/bg/home_books.jpg");
   background-size: cover;
   background-blend-mode: multiply;
   background-color: var(--primary-color);
   color: #fff;
   position: relative;
 }
-.illustrator h1 {
+.consultation{
+  background-image: url("../../assets/images/bg/home_books.jpg"); 
+}
+.real_estate{
+  background-image: url("../../assets/images/services/real_estate.jpg"); 
+  background-size: contain;
+}
+.consultation h1,
+.real_estate h1 {
   font-size: 40px;
 }
-.illustrator p {
+.real_estate p,
+.consultation p {
   margin: 20px 0;
 }
-.illustrator .grid {
+.real_estate .grid,
+.consultation .grid
+ {
   overflow: visible;
   grid-template-columns: 55% 45%;
   grid-gap: 30px;
 }
 
-.illustrator::before,
-.illustrator::after {
+.consultation::before,
+.consultation::after ,
+.real_estate::before,
+.real_estate::after 
+{
   content: "";
   position: absolute;
   height: 100px;

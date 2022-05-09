@@ -230,6 +230,25 @@ a {
   margin: 4rem;
 }
 
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.ml-2 {
+  margin-left: 1.5rem;
+}
+.ml-3 {
+  margin-left: 2rem;
+}
+
+.ml-4 {
+  margin-left: 3rem;
+}
+
+.ml-5 {
+  margin-tleftop: 4rem;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
@@ -335,8 +354,26 @@ a {
   /* position: absolute; */
 }
 /* widths */
+.w-10 {
+  width: 10%;
+}
+.w-15 {
+  width: 15%;
+}
+.w-20 {
+  width: 20%;
+}
+.w-25 {
+  width: 25%;
+}
 .w-50 {
   width: 50%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-100 {
+  width: 100%;
 }
 /* Tablets and under */
 @media (max-width: 768px) {
