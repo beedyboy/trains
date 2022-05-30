@@ -34,9 +34,9 @@ const getConfigurableProps = () => ({
       <section className="consultation">
         <div className="container grid">
           <div className="consultation-text">
-            <h1>We train by leading through consultation</h1>
-            <p>We rise by lifting others</p>
-            <Link to="/about" className="btn btn-outline">
+            <h1>Get the best consultation on study and relocation to other countries</h1>
+            {/* <p>We rise by lifting others</p> */}
+            <Link to="/about" className="btn btn-outline mt-2">
               Ask How?
             </Link>
           </div>
@@ -50,9 +50,21 @@ const getConfigurableProps = () => ({
       <section className="real_estate"> 
         <div className="container grid">
         <div className="real_estate-text">
-            <h1>Get best services on lands and housing</h1>
-            <p>We have an affordable properties with flexible payment structure</p>
+            <h1>Get best services on lands, housing, and constructions</h1>
+            <p>We have  affordable properties with suitable offers</p>
             <Link to="/about" className="btn btn-outline">
+              Ask How?
+            </Link>
+          </div>
+        </div>
+        
+      </section>
+
+      <section className="training"> 
+        <div className="container grid">
+        <div className="training-text">
+            <h1>We provide vocational training with hands on practical and adequate supervision</h1> 
+            <Link to="/about" className="btn btn-outline mt-2">
               Ask How?
             </Link>
           </div>

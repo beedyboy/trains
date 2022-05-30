@@ -103,7 +103,7 @@ const Footer = () => {
                 0907-884-4210
               </p>
               <p className="dull">
-                <MdOutlineEmail /> info@trainleadconsult.com
+                <MdOutlineEmail /> admin@trainleadconsult.com
               </p>
               <p className="dull">
                 <MdLocationPin /> 59, Gbadebo Street, Mokola, Ibadan

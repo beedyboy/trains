@@ -70,7 +70,7 @@ const Contact = () => {
             </div>
             <div className="card h-px-1">
               <h3 className="primary-color">Email</h3>
-              <p>info@trainleadconsult.com</p>
+              <p>admin@trainleadconsult.com</p>
             </div>
           </div>
         </div>
@@ -148,7 +148,7 @@ const Contact = () => {
               If You Need Any Help! Contact Us
             </h3>
             <p className="text-center">
-              We are able to do, abudantly more than you can ask for
+              We are available and ready to help
             </p>
             <div className="jc-center">
               {" "}

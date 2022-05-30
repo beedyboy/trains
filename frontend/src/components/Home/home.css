@@ -1,5 +1,5 @@
 /* Banner Image */
-.real_estate, .consultation {
+.real_estate, .consultation, .training {
   padding-top: 50px;
   height: 400px;
   background-size: cover;
@@ -13,6 +13,10 @@
 }
 .real_estate{
   background-image: url("../../assets/images/services/real_estate.jpg"); 
+  background-size: contain;
+}
+.training{
+  background-image: url("../../assets/images/services/training.jpg"); 
   background-size: contain;
 }
 .consultation h1,

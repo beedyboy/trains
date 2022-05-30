@@ -20,9 +20,9 @@ const Navbar = () => {
         <li>
           <Link to="/contact-us">CONTACT</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/blog">BLOG</Link>
-        </li>
+        </li> */}
       </>
     );
   };
